@@ -1,21 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/owo.css">
-        <script>
-            function loadDoc() {
-                var data;
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("text").innerHTML = this.responseText;
-                    }
-                };
-                xhttp.open("GET", "http://14.2.161.34:981", true);
-                xhttp.send();
-            }
-        </script>
+        <script src="./js/owo.js"></script>
     </head>
-    <body onload="loadDoc()">
+    <body onload="loadStock()">
         <div class="stock" id="text"></div>
     </body>
 </html>

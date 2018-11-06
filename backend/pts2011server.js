@@ -1,4 +1,5 @@
 const http = require(`http`);
+const fs = require(`fs`);
 
 http.createServer(function(req,res) {
 	console.log(req.method);
@@ -7,6 +8,6 @@ http.createServer(function(req,res) {
 		"Hello":"there",
 		"Access-Control-Allow-Origin":"*"
 	});
-	res.write(`hello there`);
+	res.write(fs.readFileSync(`./data.json`));
 	res.end();
 }).listen(981);

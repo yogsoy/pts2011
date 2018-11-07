@@ -2,8 +2,13 @@
     <head>
         <link rel="stylesheet" href="./css/owo.css">
         <script src="./js/owo.js"></script>
+        <script src="./js/jquery.js"></script>
     </head>
     <body onload="loadStock()">
-        <div class="stock" id="text"></div>
+        <div id="stock">Loading stock details...</div>
+        <div id="chat">
+            <input id="chatbox">
+            <button id="chatsubmit" onclick="sendChat()">Submit</button>
+        </div>
     </body>
 </html>

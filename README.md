@@ -1,2 +1,1 @@
-# pts2011
-Pent Trading Simulator 2011
+# pts2011 - Pent Trading Simulator 2011

@@ -7,7 +7,7 @@ function loadStock() {
             document.getElementById("stock").innerHTML = "<strong>"+data.t+"</strong> | "+ data.m;
         }
     };
-    xhttp.open("GET", "http://14.2.161.34:981", true); //url for testing rn
+    xhttp.open("GET", "http://127.0.0.1:981", true); //url for testing rn
     xhttp.send();
 }
 function sendChat() {

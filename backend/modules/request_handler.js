@@ -4,7 +4,7 @@ module.exports = {
     handle:function(req, res, logger) {
         res.writeHead(200, {
             "Access-Control-Allow-Origin":"*",
-            "pts-server":"right_here"
+            "atrax-me":"true"
         });
         // Read the temp example data
         fs.readFile('./data.json', function(err, data) {

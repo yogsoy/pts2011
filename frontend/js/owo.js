@@ -11,7 +11,7 @@ function loadStock() {
             data = data.split(">").join("&gt;");
             data = JSON.parse(data);
             for (var i = 0, s = data[i]; i < data.length; i++, s = data[i]) {
-                stockElement.innerHTML += "<strong>"+s.company+"</strong> | "+s.stock_cost+"<br>";
+                stockElement.innerHTML += "<div class='stock-element'><img src='/test.png'><div class='stock-title'><strong>"+s.company+"</strong></div><div class='stock-stocks'>"+s.stock_cost+"</div></div><div class='stock-pad'></div>";
             }
         }
     };

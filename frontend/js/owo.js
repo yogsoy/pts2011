@@ -1,10 +1,18 @@
 function loadStock() {
     var data;
+    var data1 = "";
     var xhttp = new XMLHttpRequest();
+    var stockElement = document.getElementById("stock");
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            data = JSON.parse(this.responseText);
-            document.getElementById("stock").innerHTML = "<strong>"+data.t+"</strong> | "+ data.m;
+            stockElement.innerHTML = "";
+            data = this.responseText;
+            data = data.split("<").join("&lt;");
+            data = data.split(">").join("&gt;");
+            data = JSON.parse(data);
+            for (var i = 0, s = data[i]; i < data.length; i++, s = data[i]) {
+                stockElement.innerHTML += "<strong>"+s.company+"</strong> | "+s.stock_cost+"<br>";
+            }
         }
     };
     xhttp.open("GET", "http://127.0.0.1:981", true); //url for testing rn

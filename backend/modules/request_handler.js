@@ -6,6 +6,7 @@ module.exports = {
             "Access-Control-Allow-Origin":"*",
             "pts-server":"right_here"
         });
+        // Read the temp example data
         fs.readFile('./data.json', function(err, data) {
             if (err) {
                 throw err;
